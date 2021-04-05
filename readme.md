@@ -20,6 +20,7 @@ display changes that we have made to a pre-existing database including the addit
 We will also use this page to add our queries and their optimizations.
 
 # Use Case for Rating System <a name="2"></a>
+![USES CASE Diagram](/imgs/usescases.png)
 
 # Business Rules <a name="3"></a> 
 The system supports three actors, students, staff, and campus faculty. Staff will have a selection for AdminYorN and Position.
