@@ -48,7 +48,6 @@ left join campus_eats_fall2020.person as b on a.driver_id = b.person_id;`
 # MySQL Dump <a name="8"></a>  
 A full folder dump is located in this [directory](/sql_dump)
 
-`init_db.sql` is the file for creating the database found  
-[Here](#/sql_commands/init_db.sql)  
+`init_db.sql` is the file for creating the database found [here](#/sql_commands/init_db.sql)  
 
 # Project Video <a name="9"></a> 
