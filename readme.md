@@ -35,6 +35,7 @@ receive one or no ratings per delivery.
 ![EERD Diagram](/imgs/eerd.png)
 
 # MySQL Queries <a name="5"></a>  
+Also Found in the Folder [sql_commands](#https://github.com/lgarceau768/group16itcs3160project/tree/master/sql_commands)
 __Retrieve the drivers information__  
 `select * from campus_eats_fall2020.driver as a
 left join campus_eats_fall2020.person as b on a.driver_id = b.person_id;`
@@ -45,5 +46,8 @@ left join campus_eats_fall2020.person as b on a.driver_id = b.person_id;`
 # Description of Future Work / Implementation <a name="7"></a> 
 
 # MySQL Dump <a name="8"></a>  
+A full folder dump is located in this [directory](/sql_dump)
+
+`init_db.sql` is the file for creating the database found (here)(#https://github.com/lgarceau768/group16itcs3160project/blob/master/sql_commands/init_db.sql)
 
 # Project Video <a name="9"></a> 
