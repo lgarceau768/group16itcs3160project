@@ -6,28 +6,35 @@ for drivers and for vendors as well.
 # Index
 * [Introduction](#introduction)  
 * [Use Case for Rating System](#2)  
-* [Business Rules]  
-* [EERD (full database)]  
-* [MySQL Queries]  
-* [Stored Procedure]  
-* [Description of Future Work / Implementation]  
-* [MySQL Dump]  
-* [Project Video](#2)  
+* [Business Rules](#3)  
+* [EERD (full database)](#4)  
+* [MySQL Queries](#5)  
+* [Stored Procedure](#6)  
+* [Description of Future Work / Implementation](#7)  
+* [MySQL Dump](#8)  
+* [Project Video](#9)  
 
 # Introduction  
 
-# Use Case for Rating System  <a name="2"></a>
+# Use Case for Rating System <a name="2"></a>
 
-# Business Rules  
+# Business Rules <a name="3"></a> 
 
-# EERD (full database)  
+# EERD (full database) <a name="4"></a> 
 
-# MySQL Queries  
+## EERD Diagram
+![EERD Diagram](/imgs/eerd.png)
 
-# Stored Procedure  
+# MySQL Queries <a name="5"></a>  
+__Retrieve the drivers information__  
+`select * from campus_eats_fall2020.driver as a
+left join campus_eats_fall2020.person as b on a.driver_id = b.person_id;`
 
-# Description of Future Work / Implementation  
 
-# MySQL Dump  
+# Stored Procedure <a name="6"></a> 
 
-# Project Video  
+# Description of Future Work / Implementation <a name="7"></a> 
+
+# MySQL Dump <a name="8"></a>  
+
+# Project Video <a name="9"></a> 
