@@ -27,7 +27,23 @@ Students will have graduation year, major, and a selection for graduate or under
 and degree college for keys. Locations need to have an ID, name, and address. Drivers must be classified as students and also need vehicle
 information such as license plate number, date hired and ratings. Deliveries have a flat fee of $5 and each delivery is a one-to-one
 between student and restaurant. Each delivery requires an ID. The rating system will be filtered according to vendors and drivers will
-receive one or no ratings per delivery.
+receive one or no ratings per delivery. For the delivery and vendor ratings you are able to view the variables listed below.
+
+### Driver Ratings
+* driver_id 
+* driver_name
+* person_id
+* rating
+* description
+* timestamp
+
+### Vendor Rating
+* vendor_id
+* resturant_name
+* person_id
+* rating
+* description
+* timestamps
 
 # EERD (full database) <a name="4"></a> 
 
