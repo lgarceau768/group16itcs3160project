@@ -49,6 +49,6 @@ left join campus_eats_fall2020.person as b on a.driver_id = b.person_id;`
 A full folder dump is located in this [directory](/sql_dump)
 
 `init_db.sql` is the file for creating the database found  
-[Here](#https://github.com/lgarceau768/group16itcs3160project/blob/master/sql_commands/init_db.sql)  
+[Here](#/sql_commands/init_db.sql)  
 
 # Project Video <a name="9"></a> 
