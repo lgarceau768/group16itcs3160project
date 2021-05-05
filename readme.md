@@ -129,7 +129,14 @@ left join campus_eats_fall2020.person as b on a.person_id = b.person_id;`
 | 1         | 103       | 2      | Lorem ipsum dolor                                                       | 2098-06-19 00:15:56 | Keith Turner          |
 
 
-# Stored Procedure <a name="6"></a> 
+# Stored Procedures <a name="6"></a> 
+The below procedures allow an admin of the database to  
+easily visualize the data. With these tools the admin  
+is able to do a variety of things, some examples are  
+- Find poor performing drivers
+- Find poor performing vendors
+- Isolate the issue of why an order got a bad review etc
+- Can show a vendor and driver what there current rating is
 
 ## getAverageDriverRatings
 ```
