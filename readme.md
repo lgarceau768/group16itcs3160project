@@ -131,6 +131,103 @@ left join campus_eats_fall2020.person as b on a.person_id = b.person_id;`
 
 # Stored Procedure <a name="6"></a> 
 
+## getAverageDriverRatings
+```
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getAverageDriverRatings`()
+Begin
+	select 
+	driver.driver_id,
+	driver.student_id,
+	driver.license_number,
+	driver.date_hired,
+	driver.rating as old_average_rating,
+	floor(coalesce(avg(driver_ratings.rating), 0)) as current_average_rating
+	from driver
+	left join driver_ratings 
+	on driver.driver_id = driver_ratings.driver_id
+	where driver_ratings.driver_id is not NULL
+	group by driver_id;
+end$$
+DELIMITER ;
+```
+
+## getAverageVendorRatings
+```
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getAverageVendorRatings`()
+Begin
+	select 
+	restaurant.restaurant_id,
+	restaurant.location,
+	restaurant.restaurant_name,
+	restaurant.schedule,
+	restaurant.website,
+	floor(coalesce(avg(vendor_ratings.rating), 0)) as average_rating,
+	vendor_ratings.person_id,
+	vendor_ratings.description,
+	vendor_ratings.timestamp
+	from restaurant
+	left join vendor_ratings 
+	on restaurant.restaurant_id = vendor_ratings.resturant_id
+	where vendor_ratings.person_id is not NULL
+	group by restaurant_id;
+end$$
+DELIMITER ;
+```
+
+## getHighestDriverRatings
+```
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getHighestDriverRatings`()
+Begin
+	select * from driver_ratings as ratings
+	left join driver on 
+	ratings.driver_id = driver.driver_id
+	order by ratings.rating desc;
+end$$
+DELIMITER ;
+```
+
+## getHighestVendorRatings
+```
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getHighestVendorRatings`()
+Begin
+	select * from vendor_ratings as ratings
+	left join restaurant on 
+	ratings.resturant_id = restaurant.restaurant_id
+	order by ratings.rating desc;
+end$$
+DELIMITER ;
+```
+
+## getLowestDriverRatings
+```
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getLowestDriverRatings`()
+Begin
+	select * from driver_ratings as ratings
+	left join driver on 
+	ratings.driver_id = driver.driver_id
+	order by ratings.rating asc;
+end$$
+DELIMITER ;
+```
+
+## getLowestVendorRatings
+```
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getLowestVendorRatings`()
+Begin
+	select * from vendor_ratings as ratings
+	left join restaurant on 
+	ratings.resturant_id = restaurant.restaurant_id
+	order by ratings.rating asc;
+end$$
+DELIMITER ;
+```
+
 # Description of Future Work / Implementation <a name="7"></a> 
 
 # MySQL Dump <a name="8"></a>  
