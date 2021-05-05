@@ -235,7 +235,12 @@ end$$
 DELIMITER ;
 ```
 
-# Description of Future Work / Implementation <a name="7"></a> 
+# Description of Future Work / Implementation <a name="7"></a>
+For future versions, we will like to be able to implement a timer that tracks customer wait times and delivery times and also allows for ID verifications when dealing with an order that has alcohol.
+Also, we want to be able to keep all customer and drivers safe, so will be implementing two-factor authentication.
+Hopefully will be able to achieve this when partnerships with local campuses arise.
+The implementation would consist of creating a mobile application to make use of this database for ordering food and managing deliveries.
+
 
 # MySQL Dump <a name="8"></a>  
 A full folder dump is located in this [directory](/sql_dump)
