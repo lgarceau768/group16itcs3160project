@@ -248,4 +248,8 @@ A full folder dump is located in this [directory](/sql_dump)
 `init_db.sql` is the file for creating the database found [here](/sql_commands/init_db.sql)  
 
 # Project Video <a name="9"></a>  
+Click to view.  
+[Raw Link](https://drive.google.com/file/d/1enNj_nksD2xT5F2ANQqtQAT9mDNF5qm0/view?usp=sharing)  
+  
+
 [![Loading](http://www.wired.com/wp-content/uploads/2016/03/MIT-Web-Loading.jpg)](https://drive.google.com/file/d/1enNj_nksD2xT5F2ANQqtQAT9mDNF5qm0/view?usp=sharing)
